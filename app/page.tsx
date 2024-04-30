@@ -1,9 +1,16 @@
-import Image from "next/image";
+'use client'
+
+
+import { useSession, signIn, signOut } from "next-auth/react"
 
 export default function Home() {
+  const { data: session } = useSession()
+
+  console.log(session)
+
   return (
    <>
-   <h1 className="text-green-400 text-2xl">Ganpati bappa morya</h1>
+   
    </>
   );
 }
